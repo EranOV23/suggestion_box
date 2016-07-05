@@ -9,7 +9,7 @@ css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body ng-app="SuggestionBox" ng-controller="HomeController">
 	<div ng-repeat="posts in suggestions"></div>
-	    <div ng-repeat="x in posts">
+	    <div ng-repeat="x in posts | orderBy:'-upvotes' " ;>
 <span> {{x.title}} </span>
 <span> {{x.upvotes}} </span>
 <span> {{x.comments}} </span>
