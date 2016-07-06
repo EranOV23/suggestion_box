@@ -20,7 +20,9 @@ app.controller('HomeController', ['$scope','suggestions', function($scope, sugge
 	 	};
 
 	 		//NEED TO EDIT
-	 	$scope.upVote = function(x){
-	 		$scope.x.posts.upvotes += 1;
-	 	};
+			$scope.upVote = function(post) {              
+			post.upvotes += 1;          
+			}; 
+
+
 }]);
