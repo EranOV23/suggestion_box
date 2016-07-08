@@ -1,4 +1,6 @@
-app.controller('HomeController', ['$scope','suggestions', function($scope, suggestions) {
+app.controller('HomeController', 
+		['$scope','suggestions', 
+		function($scope, suggestions) {
 	 	
 	 	$scope.posts = suggestions.posts;
 	 	
@@ -13,10 +15,11 @@ app.controller('HomeController', ['$scope','suggestions', function($scope, sugge
 	 		$scope.posts.push({
 	 			title: $scope.title,
 	 			upvotes: 0,
-	 			comments: [],
+				comments: [],
 				id: $scope.posts.length
-	 		});
 
+	 		});
+	 		
 	 		//after submit, clear input
 	 		$scope.title='';
 	 	};
