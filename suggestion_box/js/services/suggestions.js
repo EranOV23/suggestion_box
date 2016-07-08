@@ -4,17 +4,32 @@ app.factory('suggestions',[function(){
 			{
 				title: 'Free pizza at club meetings',
 				upvotes: 15,
-				comments: ['good'],
+				comments: [
+					{
+					body: 'I LOVE PIZZA!! :)',
+					likes: 0,
+					}
+				],
 			},		
 			{
 				title: 'Happy Hour every Sunday evening',
 				upvotes: 23,
-				comments: ['bad'],
+				comments: [
+					{
+					body: 'Sunday is not an Happy day',
+					likes: 0,
+					}
+				],
 			},
 			{
 				title: 'End all club emails with Laffy Taffy jokes',
 				upvotes: 9,
-				comments: ['fine'],
+				comments: [
+					{
+					body: 'seriously?',
+					likes: 5,
+					}
+				],
 			},
 
 			
