@@ -1,13 +1,12 @@
-
-	<div ng-repeat="posts in suggestions"></div>
-	    <div ng-repeat="x in posts | orderBy:'-upvotes' " ;>
-<span> {{x.title}} </span>
-<span> {{x.upvotes}} </span>
-<span> {{x.comments}} </span>
-<p>
-	<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(x)"></span>
-	Upvotes: {{x.upvotes}}
-</p>
+<div ng-repeat="x in posts | orderBy:'-upvotes' " ;>
+	{{post}}
+	<span> {{x.title}} </span>
+	<span> {{x.upvotes}} </span>
+	<span> {{x.comments}} </span>
+	<p>
+		<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(x)"></span>
+			Upvotes: {{x.upvotes}} |<a href="#/suggestion/{{$index}}">Comments</a>
+	</p>
  </div>
 
  <form ng-submit="addSuggestion()" style="margin-top: 50px">
@@ -17,4 +16,3 @@
  	</div>
  	<button type="submit" class="btn btn-primary">Suggest</button>
  </form>
-
