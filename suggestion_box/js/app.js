@@ -4,12 +4,12 @@ app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
       controller: "HomeController",
-      templateUrl: "views/home.html"
+      templateUrl: "js/views/home.html"
     })
 
     .when('/suggestion/:id', {
       controller: "SuggestionController",
-      templateUrl: "views/suggestion.html"
+      templateUrl: "js/views/suggestion.html"
     })
 
     .otherwise({
