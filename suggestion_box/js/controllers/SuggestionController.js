@@ -14,19 +14,21 @@ app.controller('SuggestionController',
             			}
  
  	 		 		//push suggestion posts in suggestions.js
-	 					$scope.post.comment.push({
+	 					$scope.post.comments.push({
 	 					body: $scope.body,
-	 					upvotes: 0,
+	 					likes: 0,
 	 				});
 	 			 	
 	 			 		//after submit, clear input
 			 			$scope.body='';
+	 					likes: 0;
+
 
 					};
 
 					//add +1 to suggestion
-					$scope.upVote = function(comment) {              
-						comment.upvotes += 1;          
+					$scope.likes = function(comment) {              
+						comment.likes += 1;          
 				}; 
 
 			}]);
