@@ -1,19 +1,18 @@
-<div ng-repeat="x in posts | orderBy:'-upvotes' " ;>
-	<span> {{x.title}} </span>
-	<span> {{x.upvotes}} </span>
-	<span> {{x.comments}} </span>
+<h3>{{post.title}}</h3>
+	<div ng-repeat="comment in post.comments">
+	   	<span>{{comment.body}}</span>
+	    	<p>
+				<span class="glyphicon glyphicon-plus-sign" ng-click="likes(comment)">
+				</span>	likes: {{comment.likes}}
+			</p>
+	</div>
 
+		<form ng-submit="addComment()" style="margin-top: 50px">
+			 	<h3> Submit Your comment </h3>
+ 				<div class="form-group">
+ 					<input type="text" class="form-control" placeholder="what do you think?" ng-model="body"></input>
+ 				</div>
 
-	<p>
-		<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(x)"></span>
-			Upvotes: {{x.upvotes}} |<a href="#/suggestion/{{$index}}">Comments</a>
-	</p>
- </div>
+ 				 <button type="submit" class="btn btn-primary">Comment</button>
 
- <form ng-submit="addSuggestion()" style="margin-top: 50px">
- 	<h3> Submit Your Suggestion </h3>
- 	<div class="form-group">
- 		<input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
- 	</div>
- 	<button type="submit" class="btn btn-primary">Suggest</button>
- </form>
+		</form>
