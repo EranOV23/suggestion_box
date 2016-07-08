@@ -19,7 +19,7 @@ app.controller('HomeController', ['$scope','suggestions', function($scope, sugge
 	 		$scope.title='';
 	 	};
 
-	 		//NEED TO EDIT
+	 		//add +1 to suggestion
 			$scope.upVote = function(post) {              
 			post.upvotes += 1;          
 			}; 
