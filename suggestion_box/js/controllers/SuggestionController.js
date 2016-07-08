@@ -2,22 +2,25 @@ app.controller('SuggestionController',
 			['$scope','$routeParams','suggestions',
 			function($scope,$routeParams, suggestions){
 
+			        // Put individual post ID in an object
 					$scope.post = suggestions.posts[$routeParams.id];
+
 
 					$scope.addComment = function(){
 
 	 				//if input empty, don't submit??
-
-	 		 		//push suggestion posts in suggestions.js
+			            if (!$scope.body || $scope.body === '') {
+    		            return;
+            			}
+ 
+ 	 		 		//push suggestion posts in suggestions.js
 	 					$scope.post.comment.push({
-	 					title: $scope.title,
+	 					body: $scope.body,
 	 					upvotes: 0,
-						id: $scope.post.comment.length
-
 	 				});
 	 			 	
 	 			 		//after submit, clear input
-			 			$scope.title='';
+			 			$scope.body='';
 
 					};
 
