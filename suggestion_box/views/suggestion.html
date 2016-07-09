@@ -1,8 +1,9 @@
-	<div ng-repeat="x in posts">
-	   	<span>{{x}}</span>
+<h3 class="post">{{post.title}}</h3>
+	<div class="comments" ng-repeat="comment in post.comments">
+	   	<span>{{comment.body}}</span>
 	    	<p>
-				<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(x)">
-				</span>	Upvotes: {{x.upvotes}}
+				<span class="glyphicon glyphicon-plus-sign" ng-click="likes(comment)">
+				</span>	likes: {{comment.likes}}
 			</p>
 	</div>
 
@@ -15,3 +16,8 @@
  				 <button type="submit" class="btn btn-primary">Comment</button>
 
 		</form>
+		<div class="back">
+		<a href="#/home">
+			<button class="btn btn-primary">Back</button>
+		</a>
+		</div>
